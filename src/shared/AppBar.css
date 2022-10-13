@@ -1,0 +1,48 @@
+.app-wrapper {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #0000001a;
+  background-color: #1e1e1e;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  position: fixed;
+  gap: 5px;
+}
+
+.app-wrapper--dark {
+  background: linear-gradient(black, #2a2a2a);
+  color: white;
+  box-shadow: 0 0 10px #2a2a2a, 5px 0 10px #2a2a2a;
+}
+.app-wrapper--light {
+  background: linear-gradient(#cecece, white);
+  color: #1e1e1e;
+  box-shadow: 0 0 20px #cecece, 10px 0 20px #cecece;
+}
+
+#darkMode {
+  background: transparent url("../assets/reactHeart.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#darkMode:hover,
+#darkMode:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#darkMode.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
