@@ -1,21 +1,10 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { PrivateRoutes } from "../routes/PrivateRoutes";
+import React, { useContext } from "react";
+import { RoutingContext } from "../providers/RoutingContext";
+
 import "./AppBar.css";
 
 export const AppBar = () => {
-  const navigate = useNavigate();
-  const routeAddUser = () => {
-    navigate(`${PrivateRoutes.PARAM_ADD_USER}`);
-  };
-
-  const routeHome = () => {
-    navigate(`${PrivateRoutes.PARAM_HOME}`);
-  };
-
-  const routeProfile = () => {
-    navigate(`${PrivateRoutes.PARAM_OVERVIEW}`);
-  };
+  const { routeAddUser, routeHome, routeProfile } = useContext(RoutingContext);
 
   return (
     <div className="app-wrapper app-wrapper--dark">

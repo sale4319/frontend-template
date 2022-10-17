@@ -1,12 +1,8 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
 import { ActionButton } from "../shared/ActionButton";
-import { PrivateRoutes } from "../routes/PrivateRoutes";
+import { RoutingContext } from "../providers/RoutingContext";
 
 export const HomePage = () => {
-  const navigate = useNavigate();
-  const routeChange = () => {
-    navigate(`${PrivateRoutes.PARAM_OVERVIEW}`);
-  };
-  return <ActionButton onClick={routeChange} label="Go to overview" />;
+  const { routeOverview } = useContext(RoutingContext);
+  return <ActionButton onClick={routeOverview} label="Go to overview" />;
 };

@@ -1,18 +1,14 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { PrivateRoutes } from "../routes/PrivateRoutes";
+import React, { useContext } from "react";
+import { RoutingContext } from "../providers/RoutingContext";
 import { ActionButton } from "../shared/ActionButton";
 
 export const PageNotFound = () => {
-  const navigate = useNavigate();
-  const routeChange = () => {
-    navigate(`${PrivateRoutes.PARAM_HOME}`);
-  };
+  const { routeHome } = useContext(RoutingContext);
 
   return (
     <div className="container">
       <h2>UPS are you lost?</h2>
-      <ActionButton label="Go home" onClick={routeChange} />
+      <ActionButton label="Go home" onClick={routeHome} />
     </div>
   );
 };
