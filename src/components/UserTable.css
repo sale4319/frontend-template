@@ -21,6 +21,7 @@ td {
   border-radius: 3px;
   color: white;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .view {
