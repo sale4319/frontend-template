@@ -33,9 +33,11 @@ export const UserTable = () => {
             <td>{user.username}</td>
             <td>{user.email}</td>
             <td>
-              <button className="action-button view">View</button>
-              <button className="action-button edit">Edit</button>
-              <button className="action-button delete">Delete</button>
+              <div>
+                <button className="action-button view">View</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
+              </div>
             </td>
           </tr>
         ))}

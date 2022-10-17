@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { PrivateRoutes } from "../routes/PrivateRoutes";
-import "./PageNotFound.css";
+import { ActionButton } from "../shared/ActionButton";
 
 export const PageNotFound = () => {
   const navigate = useNavigate();
@@ -12,9 +12,7 @@ export const PageNotFound = () => {
   return (
     <div className="container">
       <h2>UPS are you lost?</h2>
-      <button type="button" className="glow-on-hover" onClick={routeChange}>
-        Go home
-      </button>
+      <ActionButton label="Go home" onClick={routeChange} />
     </div>
   );
 };
