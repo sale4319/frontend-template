@@ -1,21 +1,28 @@
-table {
-  width: 50%;
-}
-
-table,
-th,
-td {
-  padding: 10px;
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-th,
-td {
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #2a2a2a, 5px 0 10px #2a2a2a;
+  padding: 20px;
+  min-width: 40%;
   background-color: #111;
   color: white;
 }
 
-.action-button {
+input {
+  min-width: 500px;
+}
+
+input,
+label {
+  display: block;
+  padding: 10px;
+  margin: 8px;
+}
+
+.form-button {
   border-radius: 8px;
   border-style: solid;
   box-sizing: border-box;
@@ -27,7 +34,7 @@ td {
   height: 40px;
   line-height: 20px;
   list-style: none;
-  margin: 3px;
+  margin: 5px;
   outline: none;
   padding: 10px 16px;
   position: relative;
@@ -39,27 +46,19 @@ td {
   -webkit-user-select: none;
   touch-action: manipulation;
   background-color: transparent;
-}
-
-.view {
   border-color: #619cfb;
 }
-.view:hover {
+
+.submit {
+  border-color: #619cfb;
+}
+.submit:hover {
   background-color: #619cfb;
 }
 
-.edit {
-  border-color: orange;
-}
-
-.edit:hover {
-  background-color: orange;
-}
-
-.delete {
+.cancel {
   border-color: red;
 }
-
-.delete:hover {
+.cancel:hover {
   background-color: red;
 }
