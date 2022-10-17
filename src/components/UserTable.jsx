@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import "./UserTable.css";
+import { useGetUsers } from "../api/useGetUsers";
+import { UserContext } from "../providers/UserContext";
 
 export const UserTable = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/users");
-    setUsers(result.data);
-  };
+  useGetUsers();
+  const { users } = useContext(UserContext);
 
   return (
     <table>
@@ -27,8 +20,8 @@ export const UserTable = () => {
       </thead>
       <tbody>
         {users.map((user, index) => (
-          <tr>
-            <th key={index}>{index + 1}</th>
+          <tr key={index}>
+            <th>{index + 1}</th>
             <td>{user.name}</td>
             <td>{user.username}</td>
             <td>{user.email}</td>

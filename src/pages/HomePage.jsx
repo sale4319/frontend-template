@@ -8,5 +8,5 @@ export const HomePage = () => {
   const routeChange = () => {
     navigate(`${PrivateRoutes.PARAM_OVERVIEW}`);
   };
-  return <ActionButton onClick={routeChange} label="Overview" />;
+  return <ActionButton onClick={routeChange} label="Go to overview" />;
 };
