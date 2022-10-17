@@ -1,15 +1,12 @@
 .app-wrapper {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-bottom: 1px solid #0000001a;
   background-color: #1e1e1e;
-  padding: 12px 0px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: white;
   width: 100%;
-  position: fixed;
-  gap: 5px;
+  position: relative;
 }
 
 .app-wrapper--dark {
@@ -23,7 +20,15 @@
   box-shadow: 0 0 20px #cecece, 10px 0 20px #cecece;
 }
 
-#darkMode {
+.add-user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+  gap: 5px;
+}
+
+#addUser {
   background: transparent url("../assets/reactHeart.svg") no-repeat center;
   background-size: 35px 35px;
   width: 35px;
@@ -35,14 +40,62 @@
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-#darkMode:hover,
-#darkMode:focus {
+#addUser:hover,
+#addUser:focus {
   filter: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-#darkMode.clicked {
+#addUser.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
+
+#homeButton {
+  background: transparent url("../assets/home.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#homeButton:hover,
+#homeButton:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#homeButton.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
+
+#profileButton {
+  background: transparent url("../assets/profile.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#profileButton:hover,
+#profileButton:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#profileButton.clicked {
   filter: none !important;
   background-color: transparent;
 }

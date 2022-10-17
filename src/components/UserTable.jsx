@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import "./UserTable.css";
 import { useGetUsers } from "../api/useGetUsers";
 import { UserContext } from "../providers/UserContext";
+import "./UserTable.css";
 
 export const UserTable = () => {
   useGetUsers();

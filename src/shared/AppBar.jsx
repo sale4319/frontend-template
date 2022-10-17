@@ -1,14 +1,31 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { PrivateRoutes } from "../routes/PrivateRoutes";
 import "./AppBar.css";
 
 export const AppBar = () => {
+  const navigate = useNavigate();
+  const routeAddUser = () => {
+    navigate(`${PrivateRoutes.PARAM_ADD_USER}`);
+  };
+
+  const routeHome = () => {
+    navigate(`${PrivateRoutes.PARAM_HOME}`);
+  };
+
+  const routeProfile = () => {
+    navigate(`${PrivateRoutes.PARAM_OVERVIEW}`);
+  };
+
   return (
-    <header>
-      <div className="app-wrapper app-wrapper--dark">
+    <div className="app-wrapper app-wrapper--dark">
+      <button onClick={routeHome} id="homeButton" />
+      <div className="add-user-wrapper">
         <label>Add</label>
-        <button id="darkMode"></button>
+        <button onClick={routeAddUser} id="addUser" />
         <label>User</label>
       </div>
-    </header>
+      <button onClick={routeProfile} id="profileButton" />
+    </div>
   );
 };

@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
 import axios from "axios";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../providers/UserContext";
 
 export const useGetUsers = () => {
@@ -7,7 +7,6 @@ export const useGetUsers = () => {
 
   const fetchUsers = async () => {
     const result = await axios.get("http://localhost:8080/users");
-
     setUsers(result.data);
   };
 
