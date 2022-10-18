@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import { RoutingContext } from "../providers/RoutingContext";
-import "./AddUser.css";
+import "./Style.css";
 
 export const AddUser = () => {
   const { routeOverview } = useContext(RoutingContext);
@@ -53,10 +53,18 @@ export const AddUser = () => {
         />
       </span>
       <span>
-        <button type="submit" className="form-button submit">
+        <button
+          disabled={!user.name || !user.username || !user.email}
+          type="submit"
+          className={
+            !user.name || !user.username || !user.email
+              ? "form-button disabled"
+              : "form-button submit"
+          }
+        >
           Submit
         </button>
-        <button type="submit" className="form-button cancel">
+        <button onClick={routeOverview} className="form-button cancel">
           Cancel
         </button>
       </span>

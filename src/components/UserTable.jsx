@@ -1,11 +1,19 @@
+import axios from "axios";
 import React, { useContext } from "react";
-import { useGetUsers } from "../api/useGetUsers";
+import { Link } from "react-router-dom";
+import { useGetUsers } from "../api/useApitHooks";
 import { UserContext } from "../providers/UserContext";
+
 import "./UserTable.css";
 
 export const UserTable = () => {
   useGetUsers();
   const { users } = useContext(UserContext);
+
+  const deleteUser = async (id) => {
+    await axios.delete(`http://localhost:8080/user/${id}`);
+    window.location.reload();
+  };
 
   return (
     <table>
@@ -27,9 +35,24 @@ export const UserTable = () => {
             <td>{user.email}</td>
             <td>
               <div>
-                <button className="action-button view">View</button>
-                <button className="action-button edit">Edit</button>
-                <button className="action-button delete">Delete</button>
+                <Link
+                  to={`/viewUser/${user.id}`}
+                  className="action-button view"
+                >
+                  View
+                </Link>
+                <Link
+                  to={`/editUser/${user.id}`}
+                  className="action-button edit"
+                >
+                  Edit
+                </Link>
+                <button
+                  onClick={() => deleteUser(user.id)}
+                  className="action-button delete"
+                >
+                  Delete
+                </button>
               </div>
             </td>
           </tr>

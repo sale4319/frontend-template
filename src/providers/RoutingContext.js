@@ -1,9 +1,11 @@
 import React, { createContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { PrivateRoutes } from "../routes/PrivateRoutes";
 
 const defaultValues = {
   routeAddUser: () => {},
+  routeViewUser: () => {},
   routeHome: () => {},
   routeProfile: () => {},
   routeOverview: () => {},
@@ -16,6 +18,10 @@ export const RoutingProvider = ({ children }) => {
 
   const routeAddUser = () => {
     navigate(`${PrivateRoutes.PARAM_ADD_USER}`);
+  };
+
+  const routeViewUser = () => {
+    navigate(`${PrivateRoutes.PARAM_VIEW_USER}`);
   };
 
   const routeHome = () => {
@@ -35,6 +41,7 @@ export const RoutingProvider = ({ children }) => {
     <RoutingContext.Provider
       value={{
         routeAddUser,
+        routeViewUser,
         routeHome,
         routeProfile,
         routeOverview,
