@@ -69,3 +69,7 @@ label {
 .disabled:hover {
   background-color: gray;
 }
+
+.font-color {
+  color: #619cfb;
+}

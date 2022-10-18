@@ -14,13 +14,22 @@ export const ViewUser = () => {
     <div className="form">
       <h1>User Details for user: {user.id}</h1>
       <span>
-        <label htmlFor="name">Name: {user.name}</label>
+        <label htmlFor="name">
+          <b className="font-color">Name: </b>
+          {user.name}
+        </label>
       </span>
       <span>
-        <label htmlFor="username">Username: {user.username}</label>
+        <label htmlFor="username">
+          <b className="font-color">Username: </b>
+          {user.username}
+        </label>
       </span>
       <span>
-        <label htmlFor="email">Email: {user.email}</label>
+        <label htmlFor="email">
+          <b className="font-color">Email: </b>
+          {user.email}
+        </label>
       </span>
       <span>
         <button onClick={routeOverview} className="form-button submit">
