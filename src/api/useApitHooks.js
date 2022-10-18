@@ -29,17 +29,3 @@ export const useGetUser = () => {
     fetchUser();
   }, []);
 };
-
-// export const useEditUser = () => {
-//   const { id } = useParams();
-//   const { user } = useContext(UserContext);
-
-//   const fetchUser = async () => {
-//     const result = await axios.get(`http://localhost:8080/user/${id}`);
-//     setUser(result.data);
-//   };
-
-//   useEffect(() => {
-//     fetchUser();
-//   }, []);
-// };
