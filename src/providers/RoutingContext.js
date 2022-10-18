@@ -28,9 +28,8 @@ export const RoutingProvider = ({ children }) => {
     navigate(`${PrivateRoutes.PARAM_HOME}`);
   };
 
-  // Currently using overview route
   const routeProfile = () => {
-    navigate(`${PrivateRoutes.PARAM_OVERVIEW}`);
+    navigate(`${PrivateRoutes.PARAM_PROFILE}`);
   };
 
   const routeOverview = () => {
