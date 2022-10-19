@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import axios from "axios";
+import { addUser } from "../api/apiUserFunctions";
 import { RoutingContext } from "../providers/RoutingContext";
 import "./Style.css";
 
@@ -15,7 +15,7 @@ export const AddUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/user", user);
+    addUser(user);
     routeOverview();
   };
 

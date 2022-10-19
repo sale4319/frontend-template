@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { RoutingContext } from "../providers/RoutingContext";
 import "../users/Style.css";
 
-export const Profile = () => {
+export const ProfilePage = () => {
   const { routeOverview } = useContext(RoutingContext);
 
   return (

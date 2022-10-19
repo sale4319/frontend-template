@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-import { useGetUser } from "../api/useApitHooks";
+import { useGetUser } from "../api/apiUserHooks";
+import { editUser } from "../api/apiUserFunctions";
 import { UserContext } from "../providers/UserContext";
 import { RoutingContext } from "../providers/RoutingContext";
 import "./Style.css";
@@ -21,7 +21,7 @@ export const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/user/${id}`, user);
+    editUser(`http://localhost:8080/user/${id}`, user);
     routeOverview();
   };
 

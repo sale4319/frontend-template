@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useGetUser } from "../api/useApitHooks";
+import { useGetUser } from "../api/apiUserHooks";
 import { RoutingContext } from "../providers/RoutingContext";
 import { UserContext } from "../providers/UserContext";
 import "./Style.css";
