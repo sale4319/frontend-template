@@ -1,13 +1,16 @@
 const refreshPage = () => window.location.reload();
 
 export const addUser = async (data = {}) => {
-  const response = await fetch("http://localhost:8080/user", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  const response = await fetch(
+    "https://backend-service-rest.herokuapp.com/user",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
+  );
   refreshPage();
   return response.json();
 };
@@ -25,6 +28,8 @@ export const editUser = async (url = "", data = {}) => {
 };
 
 export const deleteUser = async (id) => {
-  await fetch(`http://localhost:8080/user/${id}`, { method: "DELETE" });
+  await fetch(`https://backend-service-rest.herokuapp.com/user/${id}`, {
+    method: "DELETE",
+  });
   refreshPage();
 };

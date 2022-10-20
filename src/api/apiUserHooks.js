@@ -6,7 +6,7 @@ export const useGetUsers = () => {
   const { setUsers } = useContext(UserContext);
 
   const fetchUsers = () => {
-    fetch("http://localhost:8080/users", {
+    fetch("https://backend-service-rest.herokuapp.com/users", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
@@ -28,7 +28,7 @@ export const useGetUser = () => {
   const { setUser } = useContext(UserContext);
 
   const fetchUser = () => {
-    fetch(`http://localhost:8080/user/${id}`, {
+    fetch(`https://backend-service-rest.herokuapp.com/user/${id}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
