@@ -21,7 +21,7 @@ export const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    editUser(`https://backend-service-rest.herokuapp.com/user/${id}`, user);
+    editUser(id, user);
     routeOverview();
   };
 
