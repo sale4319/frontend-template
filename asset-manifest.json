@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd365b31.css",
-    "main.js": "/static/js/main.1bda896a.js",
+    "main.css": "/static/css/main.a46f2ccb.css",
+    "main.js": "/static/js/main.e75b2ed3.js",
     "static/media/reactHeart.svg": "/static/media/reactHeart.edceb35430eb2cc1cabb.svg",
     "static/media/home.svg": "/static/media/home.bafc7ece6d1c5deaa66f.svg",
+    "static/media/edit.svg": "/static/media/edit.140f9b278b6398dee527.svg",
+    "static/media/view.svg": "/static/media/view.d50962eee9d3acf1c7e0.svg",
+    "static/media/trash.svg": "/static/media/trash.a40331527a1eb7858279.svg",
     "static/media/github.svg": "/static/media/github.51aa1f9e734853188793.svg",
     "static/media/profile.svg": "/static/media/profile.e0b7d1c52cc77927712c.svg",
     "index.html": "/index.html",
-    "main.cd365b31.css.map": "/static/css/main.cd365b31.css.map",
-    "main.1bda896a.js.map": "/static/js/main.1bda896a.js.map"
+    "main.a46f2ccb.css.map": "/static/css/main.a46f2ccb.css.map",
+    "main.e75b2ed3.js.map": "/static/js/main.e75b2ed3.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd365b31.css",
-    "static/js/main.1bda896a.js"
+    "static/css/main.a46f2ccb.css",
+    "static/js/main.e75b2ed3.js"
   ]
 }
