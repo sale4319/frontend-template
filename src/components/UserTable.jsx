@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { useGetUsers } from "../api/apiUserHooks";
 import { deleteUser } from "../api/apiUserFunctions";
 import { UserContext } from "../providers/UserContext";
+import { RoutingContext } from "../providers/RoutingContext";
+import { ReadOnlyUser } from "../users/ReadOnlyUser";
 
 import "./UserTable.css";
 
 export const UserTable = () => {
   useGetUsers();
   const { users } = useContext(UserContext);
+  const { routeEditUser, routeViewUser } = useContext(RoutingContext);
 
   return (
     <table>
@@ -24,30 +26,21 @@ export const UserTable = () => {
       <tbody>
         {users.map((user, index) => (
           <tr key={index}>
-            <th>{index + 1}</th>
-            <td>{user.name}</td>
-            <td>{user.username}</td>
-            <td>{user.email}</td>
+            <ReadOnlyUser user={user} index={index} />
             <td>
               <div>
-                <Link
-                  to={`/viewUser/${user.id}`}
-                  className="default-button view"
-                >
-                  View
-                </Link>
-                <Link
-                  to={`/editUser/${user.id}`}
-                  className="default-button edit"
-                >
-                  Edit
-                </Link>
+                <button
+                  onClick={() => routeViewUser(user.id)}
+                  id="viewUser"
+                ></button>
+                <button
+                  onClick={() => routeEditUser(user.id)}
+                  id="editUser"
+                ></button>
                 <button
                   onClick={() => deleteUser(user.id)}
-                  className="default-button delete"
-                >
-                  Delete
-                </button>
+                  id="deleteUser"
+                ></button>
               </div>
             </td>
           </tr>

@@ -15,50 +15,74 @@ td {
   color: white;
 }
 
-.default-button {
-  border-radius: 8px;
-  border-style: solid;
-  box-sizing: border-box;
-  color: #ffffff;
+#viewUser {
+  background: transparent url("../assets/view.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  list-style: none;
-  margin: 3px;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#viewUser:hover,
+#viewUser:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#viewUser.clicked {
+  filter: none !important;
   background-color: transparent;
 }
 
-.view {
-  border-color: #619cfb;
-}
-.view:hover {
-  background-color: #619cfb;
-}
-
-.edit {
-  border-color: orange;
-}
-
-.edit:hover {
-  background-color: orange;
+#editUser {
+  background: transparent url("../assets/edit.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.delete {
-  border-color: red;
+#editUser:hover,
+#editUser:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.delete:hover {
-  background-color: red;
+#editUser.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
+
+#deleteUser {
+  background: transparent url("../assets/trash.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#deleteUser:hover,
+#deleteUser:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#deleteUser.clicked {
+  filter: none !important;
+  background-color: transparent;
 }
