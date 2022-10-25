@@ -12,21 +12,21 @@ export const ViewUser = () => {
 
   return (
     <div className="form">
-      <h1>User Details for user: {user.id}</h1>
+      <h1>User Details</h1>
       <span>
-        <label htmlFor="name">
+        <label className="form-label" htmlFor="name">
           <b className="font-color">Name: </b>
           {user.name}
         </label>
       </span>
       <span>
-        <label htmlFor="username">
+        <label className="form-label" htmlFor="username">
           <b className="font-color">Username: </b>
           {user.username}
         </label>
       </span>
       <span>
-        <label htmlFor="email">
+        <label className="form-label" htmlFor="email">
           <b className="font-color">Email: </b>
           {user.email}
         </label>

@@ -20,36 +20,48 @@ export const AddUser = () => {
   };
 
   return (
-    <form onSubmit={(e) => onSubmit(e)} className="form">
+    <form onSubmit={onSubmit} className="form">
       <h1>Regiser</h1>
       <span>
-        <label htmlFor="name">Name</label>
+        <label className="form-label" htmlFor="name">
+          Name
+        </label>
         <input
+          className="form-input"
           type="text"
           placeholder="Enter the name"
+          required="required"
           name="name"
           value={name}
-          onChange={(e) => onInputChange(e)}
+          onChange={onInputChange}
         />
       </span>
       <span>
-        <label htmlFor="username">Username</label>
+        <label className="form-label" htmlFor="username">
+          Username
+        </label>
         <input
+          className="form-input"
           type="text"
           placeholder="Enter the username"
+          required="required"
           name="username"
           value={username}
-          onChange={(e) => onInputChange(e)}
+          onChange={onInputChange}
         />
       </span>
       <span>
-        <label htmlFor="email">Email</label>
+        <label className="form-label" htmlFor="email">
+          Email
+        </label>
         <input
+          className="form-input"
           type="email"
           placeholder="Enter the email"
+          required="required"
           name="email"
           value={email}
-          onChange={(e) => onInputChange(e)}
+          onChange={onInputChange}
         />
       </span>
       <span>

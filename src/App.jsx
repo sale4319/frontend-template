@@ -5,7 +5,6 @@ import { PrivateRoutes } from "./routes/PrivateRoutes";
 import { PageNotFound } from "./pages/PageNotFound";
 import { UserTable } from "./components/UserTable";
 import { AddUser } from "./users/AddUser";
-import { EditUser } from "./users/EditUser";
 import { ViewUser } from "./users/ViewUser";
 import { ProfilePage } from "./pages/ProfilePage";
 import "./App.css";
@@ -19,7 +18,6 @@ function App() {
           <Route path={PrivateRoutes.PARAM_HOME} element={<HomePage />} />
           <Route path={PrivateRoutes.PARAM_OVERVIEW} element={<UserTable />} />
           <Route path={PrivateRoutes.PARAM_ADD_USER} element={<AddUser />} />
-          <Route path={PrivateRoutes.PARAM_EDIT_USER} element={<EditUser />} />
           <Route path={PrivateRoutes.PARAM_VIEW_USER} element={<ViewUser />} />
           <Route path={PrivateRoutes.PARAM_PROFILE} element={<ProfilePage />} />
           <Route path={PrivateRoutes.PARAM_404} element={<PageNotFound />} />

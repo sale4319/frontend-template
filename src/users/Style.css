@@ -5,21 +5,17 @@
   align-items: center;
   border-radius: 3px;
   box-shadow: 0 0 10px #2a2a2a, 5px 0 10px #2a2a2a;
-  padding: 20px;
-  min-width: 40%;
+  padding: 10px;
+  min-width: 20%;
   background-color: #111;
   color: white;
 }
 
-input {
-  min-width: 500px;
-}
-
-input,
-label {
+.form-input,
+.form-label {
   display: block;
   padding: 10px;
-  margin: 8px;
+  margin: 3px;
 }
 
 .form-button {
@@ -33,7 +29,7 @@ label {
   font-weight: 500;
   height: 40px;
   list-style: none;
-  margin: 5px;
+  margin: 8px;
   outline: none;
   padding: 10px 16px;
   position: relative;

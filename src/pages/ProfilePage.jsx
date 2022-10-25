@@ -9,19 +9,19 @@ export const ProfilePage = () => {
     <div className="form">
       <h1>Profile</h1>
       <span>
-        <label htmlFor="name">
+        <label className="form-label" htmlFor="name">
           <b className="font-color">Name: </b>
           Aleksandar
         </label>
       </span>
       <span>
-        <label htmlFor="username">
+        <label className="form-label" htmlFor="username">
           <b className="font-color">Surname: </b>
           Stojanovic
         </label>
       </span>
       <span>
-        <label htmlFor="email">
+        <label className="form-label" htmlFor="email">
           <b className="font-color">Github: </b>
         </label>
         <a
