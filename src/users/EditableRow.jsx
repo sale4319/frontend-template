@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../providers/UserContext";
 
-export const EditableRow = () => {
+export const EditableRow = ({ handleCancelClick }) => {
   const { user, setUser } = useContext(UserContext);
   const { name, username, email } = user;
 
@@ -14,6 +14,7 @@ export const EditableRow = () => {
       <td></td>
       <td>
         <input
+          className="form-input"
           type="text"
           name="name"
           required="required"
@@ -24,6 +25,7 @@ export const EditableRow = () => {
       </td>
       <td>
         <input
+          className="form-input"
           type="text"
           name="username"
           required="required"
@@ -34,6 +36,7 @@ export const EditableRow = () => {
       </td>
       <td>
         <input
+          className="form-input"
           type="email"
           name="email"
           required="required"
@@ -43,7 +46,8 @@ export const EditableRow = () => {
         />
       </td>
       <td>
-        <button type="submit">Save</button>
+        <button type="submit" id="confirm"></button>
+        <button type="button" onClick={handleCancelClick} id="cancel"></button>
       </td>
     </tr>
   );

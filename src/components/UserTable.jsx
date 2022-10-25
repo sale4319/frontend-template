@@ -25,6 +25,10 @@ export const UserTable = () => {
     setUser(formValues);
   };
 
+  const handleCancelClick = () => {
+    setEditUserId(null);
+  };
+
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
@@ -59,7 +63,7 @@ export const UserTable = () => {
           {users.map((user, index) => (
             <Fragment key={index}>
               {editUserId === user.id ? (
-                <EditableRow />
+                <EditableRow handleCancelClick={handleCancelClick} />
               ) : (
                 <ReadOnlyUser user={user} handleEditClick={handleEditClick} />
               )}

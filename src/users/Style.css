@@ -14,7 +14,7 @@
 .form-input,
 .form-label {
   display: block;
-  padding: 10px;
+  padding: 3px;
   margin: 3px;
 }
 
@@ -86,4 +86,52 @@
   filter: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+#confirm {
+  background: transparent url("../assets/check.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#confirm:hover,
+#confirm:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#confirm.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
+
+#cancel {
+  background: transparent url("../assets/x.svg") no-repeat center;
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#cancel:hover,
+#cancel:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#cancel.clicked {
+  filter: none !important;
+  background-color: transparent;
 }
