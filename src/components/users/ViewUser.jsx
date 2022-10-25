@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { useGetUser } from "../api/apiUserHooks";
-import { RoutingContext } from "../providers/RoutingContext";
-import { UserContext } from "../providers/UserContext";
-import { FormButton } from "../shared/buttons/FormButton";
+import { useGetUser } from "../../api/apiUserHooks";
+import { RoutingContext } from "../../providers/RoutingContext";
+import { UserContext } from "../../providers/UserContext";
+import { FormButton } from "../../shared/buttons/FormButton";
 
 export const ViewUser = () => {
   const { routeOverview } = useContext(RoutingContext);

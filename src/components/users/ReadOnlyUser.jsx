@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { RoutingContext } from "../providers/RoutingContext";
-import { deleteUser } from "../api/apiUserFunctions";
-import { IconButton } from "../shared/buttons/IconButton";
+import { RoutingContext } from "../../providers/RoutingContext";
+import { deleteUser } from "../../api/apiUserFunctions";
+import { IconButton } from "../../shared/buttons/IconButton";
 
 export const ReadOnlyUser = ({ user, handleEditClick }) => {
   const { routeViewUser } = useContext(RoutingContext);

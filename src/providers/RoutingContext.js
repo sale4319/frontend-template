@@ -6,7 +6,6 @@ import { PrivateRoutes } from "../routes/PrivateRoutes";
 const defaultValues = {
   routeAddUser: () => {},
   routeViewUser: () => {},
-  routeEditUser: () => {},
   routeHome: () => {},
   routeProfile: () => {},
   routeOverview: () => {},
@@ -19,10 +18,6 @@ export const RoutingProvider = ({ children }) => {
 
   const routeAddUser = () => {
     navigate(`${PrivateRoutes.PARAM_ADD_USER}`);
-  };
-
-  const routeEditUser = (id) => {
-    navigate(`${PrivateRoutes.PARAM_EDIT}/${id}`);
   };
 
   const routeViewUser = (id) => {
@@ -46,7 +41,6 @@ export const RoutingProvider = ({ children }) => {
       value={{
         routeAddUser,
         routeViewUser,
-        routeEditUser,
         routeHome,
         routeProfile,
         routeOverview,

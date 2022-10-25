@@ -2,8 +2,8 @@ import React, { useState, useContext, Fragment } from "react";
 import { useGetUsers } from "../api/apiUserHooks";
 import { editUser } from "../api/apiUserFunctions";
 import { UserContext } from "../providers/UserContext";
-import { ReadOnlyUser } from "../users/ReadOnlyUser";
-import { EditableRow } from "../users/EditableRow";
+import { ReadOnlyUser } from "./users/ReadOnlyUser";
+import { EditUser } from "./users/EditUser";
 
 import "./UserTable.css";
 
@@ -63,7 +63,7 @@ export const UserTable = () => {
           {users.map((user, index) => (
             <Fragment key={index}>
               {editUserId === user.id ? (
-                <EditableRow handleCancelClick={handleCancelClick} />
+                <EditUser handleCancelClick={handleCancelClick} />
               ) : (
                 <ReadOnlyUser user={user} handleEditClick={handleEditClick} />
               )}

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { addUser } from "../api/apiUserFunctions";
-import { RoutingContext } from "../providers/RoutingContext";
-import { FormButton } from "../shared/buttons/FormButton";
+import { addUser } from "../../api/apiUserFunctions";
+import { RoutingContext } from "../../providers/RoutingContext";
+import { FormButton } from "../../shared/buttons/FormButton";
 
 export const AddUser = () => {
   const { routeOverview } = useContext(RoutingContext);

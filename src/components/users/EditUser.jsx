@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { UserContext } from "../providers/UserContext";
-import { IconButton } from "../shared/buttons/IconButton";
+import { UserContext } from "../../providers/UserContext";
+import { IconButton } from "../../shared/buttons/IconButton";
 
-export const EditableRow = ({ handleCancelClick }) => {
+export const EditUser = ({ handleCancelClick }) => {
   const { user, setUser } = useContext(UserContext);
   const { name, username, email } = user;
 
