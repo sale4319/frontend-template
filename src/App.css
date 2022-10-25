@@ -8,3 +8,46 @@
   gap: 10px;
   padding: 2px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #2a2a2a, 5px 0 10px #2a2a2a;
+  padding: 10px;
+  min-width: 20%;
+  background-color: #111;
+  color: white;
+}
+
+.form-input,
+.form-label {
+  display: block;
+  padding: 3px;
+  margin: 3px;
+}
+
+.font-color {
+  color: #619cfb;
+}
+
+#githubButton {
+  background: transparent no-repeat center;
+  content: url("./assets/github.svg");
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#githubButton:hover,
+#githubButton:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}

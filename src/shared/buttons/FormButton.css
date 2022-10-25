@@ -1,0 +1,46 @@
+.form-button {
+  border-radius: 8px;
+  border-style: solid;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  list-style: none;
+  margin: 8px;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-color: transparent;
+  border-color: #619cfb;
+}
+
+#submit {
+  border-color: #619cfb;
+}
+#submit:hover {
+  background-color: #619cfb;
+}
+
+#back {
+  border-color: red;
+}
+#back:hover {
+  background-color: red;
+}
+
+#disabled {
+  border-color: gray;
+}
+#disabled:hover {
+  background-color: gray;
+}

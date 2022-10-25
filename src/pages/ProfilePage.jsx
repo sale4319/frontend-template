@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { RoutingContext } from "../providers/RoutingContext";
-import "../users/Style.css";
+import { FormButton } from "../shared/buttons/FormButton";
 
 export const ProfilePage = () => {
   const { routeOverview } = useContext(RoutingContext);
@@ -33,9 +33,12 @@ export const ProfilePage = () => {
         </a>
       </span>
       <span>
-        <button onClick={routeOverview} className="form-button submit">
-          Go Back
-        </button>
+        <FormButton
+          onClick={routeOverview}
+          id="submit"
+          type="button"
+          label="Go back"
+        />
       </span>
     </div>
   );

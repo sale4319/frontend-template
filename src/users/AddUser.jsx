@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { addUser } from "../api/apiUserFunctions";
 import { RoutingContext } from "../providers/RoutingContext";
-import "./Style.css";
+import { FormButton } from "../shared/buttons/FormButton";
 
 export const AddUser = () => {
   const { routeOverview } = useContext(RoutingContext);
@@ -65,20 +65,20 @@ export const AddUser = () => {
         />
       </span>
       <span>
-        <button
+        <FormButton
           disabled={!user.name || !user.username || !user.email}
           type="submit"
-          className={
-            !user.name || !user.username || !user.email
-              ? "form-button disabled"
-              : "form-button submit"
+          id={
+            !user.name || !user.username || !user.email ? "disabled" : "submit"
           }
-        >
-          Submit
-        </button>
-        <button onClick={routeOverview} className="form-button cancel">
-          Cancel
-        </button>
+          label="Submit"
+        />
+        <FormButton
+          onClick={routeOverview}
+          type="button"
+          id="back"
+          label="Cancel"
+        />
       </span>
     </form>
   );

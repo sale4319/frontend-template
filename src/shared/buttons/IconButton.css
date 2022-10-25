@@ -1,0 +1,46 @@
+.icon-button {
+  background-size: 35px 35px;
+  width: 35px;
+  height: 35px;
+  filter: grayscale(100%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.icon-button:hover,
+.icon-button:focus {
+  filter: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icon-button.clicked {
+  filter: none !important;
+  background-color: transparent;
+}
+
+#confirm {
+  background: transparent url("../../assets/check.svg") no-repeat center;
+}
+
+#cancel {
+  background: transparent url("../../assets/x.svg") no-repeat center;
+}
+
+#viewUser {
+  background: transparent url("../../assets/view.svg") no-repeat center;
+}
+
+#editUser {
+  background: transparent url("../../assets/edit.svg") no-repeat center;
+}
+
+#deleteUser {
+  background: transparent url("../../assets/trash.svg") no-repeat center;
+}
+
+#githubButton {
+  background: transparent url("../../assets/github.svg") no-repeat center;
+}

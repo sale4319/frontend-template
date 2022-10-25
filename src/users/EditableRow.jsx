@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "../providers/UserContext";
+import { IconButton } from "../shared/buttons/IconButton";
 
 export const EditableRow = ({ handleCancelClick }) => {
   const { user, setUser } = useContext(UserContext);
@@ -46,8 +47,8 @@ export const EditableRow = ({ handleCancelClick }) => {
         />
       </td>
       <td>
-        <button type="submit" id="confirm"></button>
-        <button type="button" onClick={handleCancelClick} id="cancel"></button>
+        <IconButton type="submit" id="confirm" />
+        <IconButton type="button" id="cancel" onClick={handleCancelClick} />
       </td>
     </tr>
   );

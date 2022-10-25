@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useGetUser } from "../api/apiUserHooks";
 import { RoutingContext } from "../providers/RoutingContext";
 import { UserContext } from "../providers/UserContext";
-import "./Style.css";
+import { FormButton } from "../shared/buttons/FormButton";
 
 export const ViewUser = () => {
   const { routeOverview } = useContext(RoutingContext);
@@ -32,9 +32,12 @@ export const ViewUser = () => {
         </label>
       </span>
       <span>
-        <button onClick={routeOverview} className="form-button submit">
-          Go Back
-        </button>
+        <FormButton
+          onClick={routeOverview}
+          id="submit"
+          type="button"
+          label="Go back"
+        />
       </span>
     </div>
   );
