@@ -8,7 +8,8 @@ import {
 
 const refreshPage = () => window.location.reload();
 
-export const getUsers = (setUsers) => {
+export const getUsers = (setUsers, setIsLoading) => {
+  setIsLoading(true);
   fetch(dev ? getUsersDev : getUsersProd, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -18,6 +19,7 @@ export const getUsers = (setUsers) => {
     })
     .then((json) => {
       setUsers(json);
+      setIsLoading(false);
     });
 };
 

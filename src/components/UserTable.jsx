@@ -4,12 +4,13 @@ import { editUser } from "../api/apiUserFunctions";
 import { UserContext } from "../providers/UserContext";
 import { ReadOnlyUser } from "./users/ReadOnlyUser";
 import { EditUser } from "./users/EditUser";
+import { LoadingSpinner } from "../shared/LoadingSpinner";
 
 import "./UserTable.css";
 
 export const UserTable = () => {
   useGetUsers();
-  const { users, user, setUser } = useContext(UserContext);
+  const { users, user, setUser, isLoading } = useContext(UserContext);
 
   const [editUserId, setEditUserId] = useState(null);
 
@@ -49,28 +50,33 @@ export const UserTable = () => {
 
   return (
     <form className="form-table" onSubmit={handleEditFormSubmit}>
-      <table>
-        <thead>
-          <tr>
-            <th>View</th>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <Fragment key={index}>
-              {editUserId === user.id ? (
-                <EditUser handleCancelClick={handleCancelClick} />
-              ) : (
-                <ReadOnlyUser user={user} handleEditClick={handleEditClick} />
-              )}
-            </Fragment>
-          ))}
-        </tbody>
-      </table>
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>View</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {users.map((user, index) => (
+              <Fragment key={index}>
+                {editUserId === user.id ? (
+                  <EditUser handleCancelClick={handleCancelClick} />
+                ) : (
+                  <ReadOnlyUser user={user} handleEditClick={handleEditClick} />
+                )}
+              </Fragment>
+            ))}
+          </tbody>
+        </table>
+      )}
     </form>
   );
 };

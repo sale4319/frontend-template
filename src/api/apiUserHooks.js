@@ -4,10 +4,10 @@ import { UserContext } from "../providers/UserContext";
 import { getUsers, getUser } from "./apiUserFunctions";
 
 export const useGetUsers = () => {
-  const { setUsers } = useContext(UserContext);
+  const { setUsers, setIsLoading } = useContext(UserContext);
 
   useEffect(() => {
-    getUsers(setUsers);
+    getUsers(setUsers, setIsLoading);
   }, []);
 };
 
