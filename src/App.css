@@ -33,6 +33,13 @@
   color: #619cfb;
 }
 
+.gradient-text {
+  font-size: 32px;
+  background: -webkit-linear-gradient(#6decb9, #619cfb, #e91e63);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #githubButton {
   background: transparent no-repeat center;
   content: url("./assets/github.svg");
