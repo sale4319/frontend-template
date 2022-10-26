@@ -1,12 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
+import { HomePage, ProfilePage, PageNotFound } from "./pages";
 import { AppBar } from "./shared/AppBar";
 import { PrivateRoutes } from "./routes/PrivateRoutes";
-import { PageNotFound } from "./pages/PageNotFound";
 import { UserTable } from "./components/UserTable";
-import { AddUser } from "./components/users/AddUser";
-import { ViewUser } from "./components/users/ViewUser";
-import { ProfilePage } from "./pages/ProfilePage";
+import { AddUser, ViewUser } from "./components/users";
+
 import "./App.css";
 
 function App() {

@@ -4,17 +4,6 @@
   align-items: center;
 }
 
-.loading-text {
-  font-size: 22px !important;
-  color: darkorange;
-}
-
-.link-text {
-  text-decoration: none;
-  color: #6762a6;
-  font-size: 22px !important;
-}
-
 .loadingspinner {
   --square: 26px;
   --offset: 30px;

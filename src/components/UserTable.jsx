@@ -2,8 +2,7 @@ import React, { useState, useContext, Fragment } from "react";
 import { useGetUsers } from "../api/apiUserHooks";
 import { editUser } from "../api/apiUserFunctions";
 import { UserContext } from "../providers/UserContext";
-import { ReadOnlyUser } from "./users/ReadOnlyUser";
-import { EditUser } from "./users/EditUser";
+import { ReadOnlyUser, EditUser } from "./users";
 import { LoadingSpinner } from "../shared/LoadingSpinner";
 
 import "./UserTable.css";

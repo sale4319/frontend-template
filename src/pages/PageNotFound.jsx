@@ -7,7 +7,7 @@ export const PageNotFound = () => {
 
   return (
     <div className="container">
-      <h2>UPS are you lost?</h2>
+      <h1 className="gradient-text">UPS are you lost?</h1>
       <ActionButton label="Go home" onClick={routeHome} />
     </div>
   );
