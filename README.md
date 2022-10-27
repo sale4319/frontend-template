@@ -18,9 +18,9 @@ Clone the project, set `dev` variable in `Users.js` to true, and if you expect t
 
 ## Further development:
 
-- [*] Create stable frontend infrastructure
-- [*] Connect frontend to backend locally
-- [*] Create CRUD operations
-- [*] Deploy frontend and connect it to backend
+- [x] Create stable frontend infrastructure
+- [x] Connect frontend to backend locally
+- [x] Create CRUD operations
+- [x] Deploy frontend and connect it to backend
 - [ ] Add typescript
 - [ ] Write tests
