@@ -67,7 +67,6 @@ export const AddUser = () => {
       <span>
         <FormButton
           disabled={!user.name || !user.username || !user.email}
-          onClick={routeOverview}
           type="submit"
           id={
             !user.name || !user.username || !user.email ? "disabled" : "submit"
