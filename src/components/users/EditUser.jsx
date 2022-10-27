@@ -20,7 +20,7 @@ export const EditUser = ({ handleCancelClick }) => {
           name="name"
           required="required"
           placeholder="Enter a name"
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
           value={name}
         />
       </td>
@@ -31,7 +31,7 @@ export const EditUser = ({ handleCancelClick }) => {
           name="username"
           required="required"
           placeholder="Enter a pn"
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
           value={username}
         />
       </td>
@@ -42,7 +42,7 @@ export const EditUser = ({ handleCancelClick }) => {
           name="email"
           required="required"
           placeholder="Enter an email"
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
           value={email}
         />
       </td>

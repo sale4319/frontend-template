@@ -44,7 +44,6 @@ export const addUser = async (data = {}) => {
     },
     body: JSON.stringify(data),
   });
-  refreshPage();
   return response.json();
 };
 

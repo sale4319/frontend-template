@@ -15,12 +15,12 @@ export const AddUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    addUser(user);
+    await addUser(user);
     routeOverview();
   };
 
   return (
-    <form onSubmit={onSubmit} className="form">
+    <form onSubmit={(e) => onSubmit(e)} className="form">
       <h1>Regiser</h1>
       <span>
         <label className="form-label" htmlFor="name">
@@ -33,7 +33,7 @@ export const AddUser = () => {
           required="required"
           name="name"
           value={name}
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
         />
       </span>
       <span>
@@ -47,7 +47,7 @@ export const AddUser = () => {
           required="required"
           name="username"
           value={username}
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
         />
       </span>
       <span>
@@ -61,7 +61,7 @@ export const AddUser = () => {
           required="required"
           name="email"
           value={email}
-          onChange={onInputChange}
+          onChange={(e) => onInputChange(e)}
         />
       </span>
       <span>

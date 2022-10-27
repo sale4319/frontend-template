@@ -31,17 +31,6 @@ export const UserTable = () => {
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedUser = {
-      id: user.id,
-      name: user.name,
-      username: user.username,
-      email: user.email,
-    };
-
-    const newUsers = [...users];
-    const index = users.findIndex((user) => user.id === editUserId);
-    newUsers[index] = editedUser;
-
     editUser(editUserId, user);
     setEditUserId(null);
   };
