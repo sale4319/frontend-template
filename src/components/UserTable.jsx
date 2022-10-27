@@ -10,7 +10,6 @@ import "./UserTable.css";
 export const UserTable = () => {
   useGetUsers();
   const { users, user, setUser, isLoading } = useContext(UserContext);
-
   const [editUserId, setEditUserId] = useState(null);
 
   const handleEditClick = (event, user) => {
